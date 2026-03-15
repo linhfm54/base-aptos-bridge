@@ -1,0 +1,10 @@
+[package]
+name = "BaseAptosBridge"
+version = "1.0.0"
+
+[addresses]
+base_aptos_bridge = "_"
+layerzero_endpoint = "0x1a2b3c..." # Replace with actual LZ Endpoint address on Aptos Testnet/Mainnet
+
+[dependencies]
+AptosFramework = { git = "https://github.com/aptos-labs/aptos-core.git", subdir = "aptos-move/framework/aptos-framework", rev = "mainnet" }
