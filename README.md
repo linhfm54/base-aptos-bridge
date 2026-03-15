@@ -22,10 +22,20 @@ sequenceDiagram
     LayerZero Endpoint (Aptos)->>Aptos Module (Move): lz_receive(payload)
     Aptos Module (Move)->>Aptos Module (Move): decode Custom Bytes
     Aptos Module (Move)->>Aptos Module (Move): processAction()
-Payload SpecificationBytesSizeTypeDescription01 byteuint8Action ID (1 = Update State)1-22 bytesuint16Message length (Big Endian)3...Length bytesstringUTF-8 encoded stringSetup & DeploymentEVM (Base)Bashcd evm
+Setup & Deployment
+EVM (Base)
+
+Bash
+cd evm
 npm install
 npx hardhat run scripts/deploy.js --network base_sepolia
-AptosBashcd aptos
+Aptos
+
+Bash
+cd aptos
 aptos move publish --profile default
-ConfigurationBashcd evm
+Configuration
+
+Bash
+cd evm
 npx hardhat run scripts/setPeer.js --network base_sepolia
